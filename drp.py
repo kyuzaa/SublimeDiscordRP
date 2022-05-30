@@ -33,7 +33,7 @@ def base_activity(started = False):
             'large_image': 'sublime3',
             'large_text': 'Sublime Text v%s' % (sublime.version())
         },
-        'state': settings.get('start_state') if started else 'Idle'
+        'state': settings.get('start_state') if started else settings.get("idle_state")
     }
     if settings.get('big_icon'):
         activity['assets'] = {
